@@ -1,0 +1,5 @@
+----------Function Functional-Predefined Interface----------
+
+1. Function is predefined functional interface which takes two argument and returns one value.
+2. present in java.util.function
+3. Function have a apply method.
