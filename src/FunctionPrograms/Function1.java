@@ -1,4 +1,4 @@
-package FunctionPrograms;
+package functionPrograms;
 
 import java.sql.SQLOutput;
 import java.util.function.Function;
@@ -12,14 +12,14 @@ class Employee
         this.marks = marks;
     }
 }
-public class Function1 {
+public class Function {
     public static void main(String[] args) {
-        Employee[] em = {new Employee("Abhishek", 55),
+        Employee[] employee = {new Employee("Abhishek", 55),
                 new Employee("Yash", 80),
                 new Employee("Chirag", 40),
                 new Employee("Om", 25)
         };
-        Function<Employee,String> f1 = i ->{
+        Function<Employee,String> gradeEmployee = i ->{
         int marks = i.marks;
         String grade = "";
         if(marks >= 70) grade="A[Destinction]";
@@ -29,11 +29,11 @@ public class Function1 {
         return grade;
         };
 
-        for(Employee e : em)
+        for(Employee employess : employee)
         {
-            System.out.println("Student name is: "+e.name);
-            System.out.println("Marks is: "+e.marks);
-            System.out.println("Grade is: "+f1.apply(e));
+            System.out.println("Student name is: "+employess.name);
+            System.out.println("Marks is: "+employess.marks);
+            System.out.println("Grade is: "+gradeEmployee.apply(employess));
             System.out.println();
         }
 
